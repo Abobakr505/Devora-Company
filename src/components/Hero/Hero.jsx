@@ -137,12 +137,12 @@ export default function Hero() {
 
         <h1 className="font-display font-medium text-hero-sm sm:text-6xl md:text-7xl lg:text-hero-lg text-mist-100 glow-text ">
           <span className="block overflow-hidden">
-            <span data-hero-word className="inline-block pb-8">
+            <span data-hero-word className="inline-block">
               {t.hero.lineOne}
             </span>
           </span>
           <span className="block overflow-hidden">
-            <span data-hero-word className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600 pb-4">
+            <span data-hero-word className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600 ">
               {t.hero.lineTwo}
             </span>
           </span>
