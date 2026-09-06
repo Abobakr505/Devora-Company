@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "thmanyah";
+  src: url("/fonts/thmanyahserifdisplay-Bold.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "thmanyahsans";
+  src: url("/fonts/thmanyahsans-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@layer base {
+  * {
+    @apply border-ink-700/60;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #050d0b;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: #1fce9b;
+    color: #050d0b;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050d0b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #152b25;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1d3a32;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1fce9b;
+    outline-offset: 3px;
+  }
+
+html[lang="ar"] body {
+  font-family: "thmanyahsans", sans-serif;
+}
+
+html[lang="ar"] .font-display {
+  font-family: "thmanyah", sans-serif;
+  letter-spacing: 0;
+}
+}
+
+[dir="rtl"] .animate-marquee {
+  animation-direction: reverse;
+}
+
+@layer components {
+  .grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 60;
+    background-image: theme("backgroundImage.noise");
+    mix-blend-mode: overlay;
+  }
+
+  .bg-grid {
+    background-image: theme("backgroundImage.grid-faint");
+    background-size: 64px 64px;
+  }
+
+  .container-devora {
+    @apply mx-auto w-full max-w-[1400px] px-6 sm:px-10 lg:px-16;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 40px rgba(31, 206, 155, 0.25);
+  }
+
+  .section-label {
+    @apply font-display text-xs tracking-[0.25em] text-emerald-500/80;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.lang{
+  font-family: "'Space Grotesk'","thmanyahsans", sans-serif !important;
+}

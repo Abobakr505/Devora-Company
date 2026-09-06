@@ -1,0 +1,463 @@
+export const translations = {
+  en: {
+    dir: "ltr",
+    lang: "en",
+    meta: {
+      title: "Devora — Software & Digital Solutions",
+      description:
+        "Devora is a software company building modern digital products, scalable web applications, and intelligent solutions for ambitious businesses.",
+    },
+    nav: {
+      links: [
+        { label: "Home", href: "#home" },
+        { label: "About", href: "#about" },
+        { label: "Services", href: "#services" },
+        { label: "Projects", href: "#projects" },
+        { label: "Process", href: "#process" },
+        { label: "Contact", href: "#contact" },
+      ],
+      cta: "Let's Build Something",
+      langToggle: "العربية",
+    },
+    hero: {
+      lineOne: "WE BUILD",
+      lineTwo: "WHAT'S NEXT.",
+      description:
+        "Devora is a software company building modern digital products, scalable web applications, and intelligent solutions for ambitious businesses.",
+      ctaPrimary: "Start a Project",
+      ctaSecondary: "Explore Our Work",
+      scroll: "SCROLL",
+    },
+    techMarqueeLabel: "POWERED BY MODERN TECHNOLOGY",
+    techMarquee: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "Go",
+      "PostgreSQL",
+      "Supabase",
+      "Docker",
+      "AWS",
+    ],
+    about: {
+      label: "ABOUT DEVORA",
+      title: ["We don't just write code.", "We solve problems."],
+      paragraphs: [
+        "Devora is a growing software company focused on building digital products and scalable software solutions that help businesses move faster, operate smarter, and create better experiences for the people they serve.",
+        "We work closely with founders and teams to turn early ideas into products that hold up under real usage — not just demos.",
+      ],
+    },
+    stats: [
+      { value: 20, suffix: "+", label: "Projects Delivered" },
+      { value: 10, suffix: "+", label: "Clients Served" },
+      { value: 3, suffix: "+", label: "Years Experience" },
+      { value: 24, suffix: "/7", label: "Support" },
+    ],
+    services: {
+      label: "WHAT WE DO",
+      title: "Services built around outcomes",
+      items: [
+        {
+          index: "01",
+          title: "Web Development",
+          description:
+            "Fast, scalable web applications built on modern architecture — from marketing sites to complex platforms.",
+          tags: ["React", "Next.js", "Node.js"],
+        },
+        {
+          index: "02",
+          title: "Mobile App Development",
+          description:
+            "Native-feeling iOS and Android apps that stay reliable as your user base grows.",
+          tags: ["React Native", "Swift", "Kotlin"],
+        },
+        {
+          index: "03",
+          title: "UI/UX Design",
+          description:
+            "Interfaces designed around how people actually work, tested until the experience feels obvious.",
+          tags: ["Figma", "Design Systems", "Prototyping"],
+        },
+        {
+          index: "04",
+          title: "Custom Software",
+          description:
+            "Internal tools and business systems tailored to your workflow instead of bending your process to fit software.",
+          tags: ["APIs", "Automation", "Integrations"],
+        },
+        {
+          index: "05",
+          title: "AI & Automation",
+          description:
+            "Practical AI features and automated pipelines that remove repetitive work from your team's day.",
+          tags: ["LLMs", "Pipelines", "Data"],
+        },
+        {
+          index: "06",
+          title: "Cloud & DevOps",
+          description:
+            "Infrastructure that scales quietly in the background — deployment, monitoring, and reliability handled.",
+          tags: ["AWS", "Docker", "CI/CD"],
+        },
+      ],
+    },
+    projects: {
+      label: "SELECTED WORK",
+      title: "Products we've shipped",
+      items: [
+        {
+          index: "01",
+          name: "Medora",
+          category: "Healthcare Platform",
+          description:
+            "A patient-scheduling and records platform built for clinics managing thousands of appointments a week.",
+          tech: ["React", "PostgreSQL", "AWS"],
+          gradient: "from-emerald-700/40 via-ink-800 to-ink-900",
+        },
+        {
+          index: "02",
+          name: "Nova",
+          category: "E-commerce Platform",
+          description:
+            "A headless commerce engine handling inventory, checkout, and fulfillment across three storefronts.",
+          tech: ["Next.js", "Stripe", "Supabase"],
+          gradient: "from-emerald-600/30 via-ink-800 to-ink-900",
+        },
+        {
+          index: "03",
+          name: "Flow",
+          category: "Business Management System",
+          description:
+            "An operations dashboard that replaced six spreadsheets with one live view of the business.",
+          tech: ["TypeScript", "Node.js", "Docker"],
+          gradient: "from-emerald-800/40 via-ink-800 to-ink-900",
+        },
+        {
+          index: "04",
+          name: "Pulse",
+          category: "Analytics Dashboard",
+          description:
+            "Real-time product analytics built for teams that needed answers faster than their old BI tool allowed.",
+          tech: ["React", "Go", "ClickHouse"],
+          gradient: "from-emerald-700/30 via-ink-800 to-ink-900",
+        },
+      ],
+    },
+    projectDetails: {
+      back: "Back to projects",
+      client: "Client",
+      year: "Year",
+      role: "Role",
+      duration: "Duration",
+      visit: "Visit website",
+      challenge: "The challenge",
+      solution: "The solution",
+      prev: "Previous project",
+      next: "Next project",
+    },
+    whyDevora: {
+      label: "WHY DEVORA",
+      title: "Reasons teams choose to build with us",
+      items: [
+        { index: "01", title: "Built for Scale", description: "Architecture that holds up under real usage, not just a demo." },
+        { index: "02", title: "Modern Technology", description: "Tools chosen for the problem, not for the trend." },
+        { index: "03", title: "Business-Focused", description: "Every technical decision ties back to a business outcome." },
+        { index: "04", title: "Security First", description: "Access control, encryption, and audits built in from day one." },
+        { index: "05", title: "Fast & Reliable", description: "Products that load quickly and stay up under pressure." },
+        { index: "06", title: "Long-Term Partnership", description: "We stay involved after launch — not just through the handoff." },
+      ],
+    },
+    process: {
+      label: "HOW WE BUILD",
+      title: "A process built for clarity",
+      steps: [
+        { index: "01", title: "Discover", description: "Understanding the idea, the business goals, and the constraints around them." },
+        { index: "02", title: "Strategy", description: "Planning the architecture, the user experience, and the technology to support both." },
+        { index: "03", title: "Design", description: "Shaping a clear, modern interface that people can navigate without thinking." },
+        { index: "04", title: "Development", description: "Building the product on an architecture that can grow with the business." },
+        { index: "05", title: "Testing", description: "Checking performance, security, and reliability before anything reaches a user." },
+        { index: "06", title: "Launch", description: "Deploying the product and continuing to improve it after release." },
+      ],
+    },
+    techStack: {
+      label: "BUILT WITH THE RIGHT TECHNOLOGY",
+      title: "A stack chosen for the problem",
+      groups: [
+        { group: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind"] },
+        { group: "Backend", items: ["Node.js", "Go", "Python"] },
+        { group: "Database", items: ["PostgreSQL", "Supabase", "MongoDB"] },
+        { group: "DevOps", items: ["Docker", "GitHub Actions", "AWS", "Vercel"] },
+      ],
+    },
+    cta: {
+      title: "Let's build something extraordinary.",
+      description:
+        "Have an idea, a product, or a problem that needs solving? Let's turn it into something real.",
+      button: "Start a Conversation",
+    },
+    contact: {
+      label: "LET'S TALK",
+      title: "Tell us about your project",
+      email: "hello@devora.dev",
+      phone: "+20 100 000 0000",
+      location: "Sohag, Egypt — Remote Worldwide",
+      form: {
+        name: "Name",
+        namePlaceholder: "Your name",
+        email: "Email",
+        emailPlaceholder: "you@company.com",
+        company: "Company",
+        companyPlaceholder: "Company name",
+        projectType: "Project Type",
+        projectTypes: [
+          "Web Application",
+          "Mobile App",
+          "Custom Software",
+          "AI & Automation",
+          "Other",
+        ],
+        message: "Message",
+        messagePlaceholder: "Tell us a little about what you're building.",
+        send: "Send Message",
+        sent: "Message Sent",
+      },
+    },
+    footer: {
+      tagline: "Building digital products for what's next.",
+      copyright: "© 2026 Devora. All rights reserved.",
+    },
+  },
+
+  ar: {
+    dir: "rtl",
+    lang: "ar",
+    meta: {
+      title: "ديفورا — حلول برمجية ورقمية",
+      description:
+        "ديفورا شركة برمجيات متخصصة في بناء منتجات رقمية حديثة، وتطبيقات ويب قابلة للتوسع، وحلول ذكية للشركات الطموحة.",
+    },
+    nav: {
+      links: [
+        { label: "الرئيسية", href: "#home" },
+        { label: "من نحن", href: "#about" },
+        { label: "خدماتنا", href: "#services" },
+        { label: "أعمالنا", href: "#projects" },
+        { label: "منهجيتنا", href: "#process" },
+        { label: "تواصل معنا", href: "#contact" },
+      ],
+      cta: "لنبنِ شيئًا معًا",
+      langToggle: "English",
+    },
+    hero: {
+      lineOne: "نحن نبني",
+      lineTwo: "ما هو قادم.",
+      description:
+        "ديفورا شركة برمجيات متخصصة في بناء منتجات رقمية حديثة، وتطبيقات ويب قابلة للتوسع، وحلول ذكية للشركات الطموحة.",
+      ctaPrimary: "ابدأ مشروعك",
+      ctaSecondary: "استعرض أعمالنا",
+      scroll: "مرر للأسفل",
+    },
+    techMarqueeLabel: "مدعومون بأحدث التقنيات",
+    techMarquee: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "Go",
+      "PostgreSQL",
+      "Supabase",
+      "Docker",
+      "AWS",
+    ],
+    about: {
+      label: "من نحن",
+      title: ["نحن لا نكتب الأكواد فقط.", "نحن نحل المشكلات."],
+      paragraphs: [
+        "ديفورا شركة برمجيات في طور النمو، تركّز على بناء منتجات رقمية وحلول برمجية قابلة للتوسع تساعد الشركات على العمل بشكل أسرع وأذكى، وتقديم تجربة أفضل لعملائها.",
+        "نعمل عن قرب مع المؤسسين والفرق لتحويل الأفكار الأولية إلى منتجات تصمد أمام الاستخدام الحقيقي — وليست مجرد عروض تجريبية.",
+      ],
+    },
+    stats: [
+      { value: 20, suffix: "+", label: "مشروعًا منجزًا" },
+      { value: 10, suffix: "+", label: "عميلًا خدمناهم" },
+      { value: 3, suffix: "+", label: "سنوات خبرة" },
+      { value: 24, suffix: "/7", label: "دعم فني" },
+    ],
+    services: {
+      label: "ماذا نقدم",
+      title: "خدمات مصممة لتحقيق نتائج",
+      items: [
+        {
+          index: "01",
+          title: "تطوير الويب",
+          description:
+            "تطبيقات ويب سريعة وقابلة للتوسع، مبنية على بنية حديثة — من المواقع التسويقية إلى المنصات المعقدة.",
+          tags: ["React", "Next.js", "Node.js"],
+        },
+        {
+          index: "02",
+          title: "تطوير تطبيقات الجوال",
+          description:
+            "تطبيقات iOS وAndroid بأداء يشبه التطبيقات الأصلية، تبقى موثوقة مع نمو قاعدة المستخدمين.",
+          tags: ["React Native", "Swift", "Kotlin"],
+        },
+        {
+          index: "03",
+          title: "تصميم UI/UX",
+          description:
+            "واجهات مصممة حول طريقة عمل المستخدمين الفعلية، ومُختبرة حتى تصبح التجربة بديهية.",
+          tags: ["Figma", "أنظمة تصميم", "نماذج أولية"],
+        },
+        {
+          index: "04",
+          title: "برمجيات مخصصة",
+          description:
+            "أدوات داخلية وأنظمة أعمال مصممة خصيصًا لسير عملك، بدلًا من تعديل عملك ليناسب برنامجًا جاهزًا.",
+          tags: ["APIs", "أتمتة", "تكاملات"],
+        },
+        {
+          index: "05",
+          title: "الذكاء الاصطناعي والأتمتة",
+          description:
+            "ميزات ذكاء اصطناعي عملية وأنظمة أتمتة تزيل الأعمال المتكررة عن فريقك.",
+          tags: ["نماذج لغوية", "خطوط معالجة", "بيانات"],
+        },
+        {
+          index: "06",
+          title: "الحوسبة السحابية والعمليات",
+          description:
+            "بنية تحتية تعمل بهدوء في الخلفية — نشر، مراقبة، وموثوقية مُدارة بالكامل.",
+          tags: ["AWS", "Docker", "CI/CD"],
+        },
+      ],
+    },
+    projects: {
+      label: "أعمال مختارة",
+      title: "منتجات أطلقناها",
+      items: [
+        {
+          index: "01",
+          name: "ميدورا",
+          category: "منصة رعاية صحية",
+          description:
+            "منصة لجدولة المواعيد وإدارة السجلات، مبنية لعيادات تدير آلاف المواعيد أسبوعيًا.",
+          tech: ["React", "PostgreSQL", "AWS"],
+          gradient: "from-emerald-700/40 via-ink-800 to-ink-900",
+        },
+        {
+          index: "02",
+          name: "نوفا",
+          category: "منصة تجارة إلكترونية",
+          description:
+            "محرك تجارة إلكترونية بدون واجهة ثابتة، يدير المخزون وعمليات الدفع والتنفيذ عبر ثلاثة متاجر.",
+          tech: ["Next.js", "Stripe", "Supabase"],
+          gradient: "from-emerald-600/30 via-ink-800 to-ink-900",
+        },
+        {
+          index: "03",
+          name: "فلو",
+          category: "نظام إدارة أعمال",
+          description:
+            "لوحة تحكم تشغيلية استبدلت ست ملفات إكسل بعرض واحد مباشر لأداء الشركة.",
+          tech: ["TypeScript", "Node.js", "Docker"],
+          gradient: "from-emerald-800/40 via-ink-800 to-ink-900",
+        },
+        {
+          index: "04",
+          name: "بالس",
+          category: "لوحة تحليلات",
+          description:
+            "تحليلات منتج لحظية بُنيت لفرق كانت بحاجة لإجابات أسرع من أداة التحليل القديمة لديها.",
+          tech: ["React", "Go", "ClickHouse"],
+          gradient: "from-emerald-700/30 via-ink-800 to-ink-900",
+        },
+      ],
+    },
+    projectDetails: {
+      back: "الرجوع للمشاريع",
+      client: "العميل",
+      year: "السنة",
+      role: "الدور",
+      duration: "المدة",
+      visit: "زيارة الموقع",
+      challenge: "التحدي",
+      solution: "الحل",
+      prev: "المشروع السابق",
+      next: "المشروع التالي",
+    },
+    whyDevora: {
+      label: "لماذا ديفورا",
+      title: "أسباب تجعل الفرق تختار العمل معنا",
+      items: [
+        { index: "01", title: "مبني للتوسع", description: "بنية تقنية تصمد أمام الاستخدام الحقيقي، وليست مجرد عرض تجريبي." },
+        { index: "02", title: "تقنية حديثة", description: "أدوات تُختار بناءً على المشكلة، وليس بناءً على الموضة." },
+        { index: "03", title: "مرتكز على الأعمال", description: "كل قرار تقني مرتبط بنتيجة فعلية للأعمال." },
+        { index: "04", title: "الأمان أولًا", description: "التحكم في الوصول، والتشفير، والمراجعات مدمجة منذ اليوم الأول." },
+        { index: "05", title: "سريع وموثوق", description: "منتجات تُحمَّل بسرعة وتبقى تعمل تحت الضغط." },
+        { index: "06", title: "شراكة طويلة الأمد", description: "نبقى معك بعد الإطلاق — وليس فقط حتى لحظة التسليم." },
+      ],
+    },
+    process: {
+      label: "كيف نعمل",
+      title: "منهجية مبنية على الوضوح",
+      steps: [
+        { index: "01", title: "الاكتشاف", description: "فهم الفكرة، وأهداف العمل، والقيود المحيطة بها." },
+        { index: "02", title: "التخطيط", description: "تخطيط البنية التقنية وتجربة المستخدم والتقنية الداعمة لهما." },
+        { index: "03", title: "التصميم", description: "بناء واجهة واضحة وحديثة يستطيع المستخدم التنقل فيها دون تفكير." },
+        { index: "04", title: "التطوير", description: "بناء المنتج على بنية قادرة على النمو مع الأعمال." },
+        { index: "05", title: "الاختبار", description: "فحص الأداء والأمان والموثوقية قبل وصول أي شيء للمستخدم." },
+        { index: "06", title: "الإطلاق", description: "نشر المنتج والاستمرار في تحسينه بعد الإطلاق." },
+      ],
+    },
+    techStack: {
+      label: "مبني بالتقنية المناسبة",
+      title: "تقنيات تُختار حسب المشكلة",
+      groups: [
+        { group: "الواجهة الأمامية", items: ["React", "Next.js", "TypeScript", "Tailwind"] },
+        { group: "الواجهة الخلفية", items: ["Node.js", "Go", "Python"] },
+        { group: "قواعد البيانات", items: ["PostgreSQL", "Supabase", "MongoDB"] },
+        { group: "العمليات السحابية", items: ["Docker", "GitHub Actions", "AWS", "Vercel"] },
+      ],
+    },
+    cta: {
+      title: "لنبنِ شيئًا استثنائيًا.",
+      description:
+        "لديك فكرة، أو منتج، أو مشكلة تحتاج إلى حل؟ لنحوّلها إلى شيء حقيقي.",
+      button: "ابدأ محادثة",
+    },
+    contact: {
+      label: "تواصل معنا",
+      title: "أخبرنا عن مشروعك",
+      email: "hello@devora.dev",
+      phone: "+20 100 000 0000",
+      location: "سوهاج، مصر — عن بُعد لجميع أنحاء العالم",
+      form: {
+        name: "الاسم",
+        namePlaceholder: "اسمك",
+        email: "البريد الإلكتروني",
+        emailPlaceholder: "you@company.com",
+        company: "الشركة",
+        companyPlaceholder: "اسم الشركة",
+        projectType: "نوع المشروع",
+        projectTypes: [
+          "تطبيق ويب",
+          "تطبيق جوال",
+          "برمجيات مخصصة",
+          "ذكاء اصطناعي وأتمتة",
+          "أخرى",
+        ],
+        message: "الرسالة",
+        messagePlaceholder: "أخبرنا قليلًا عمّا تبنيه.",
+        send: "إرسال الرسالة",
+        sent: "تم إرسال الرسالة",
+      },
+    },
+    footer: {
+      tagline: "نبني منتجات رقمية لما هو قادم.",
+      copyright: "© 2026 ديفورا. جميع الحقوق محفوظة.",
+    },
+  },
+};
