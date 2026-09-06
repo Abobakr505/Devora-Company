@@ -97,7 +97,7 @@ export default function NotFound() {
   return (
     <main
       ref={rootRef}
-      className="relative min-h-[100svh] overflow-hidden bg-grid bg-ink-950 flex items-center justify-center pt-8"
+      className="relative min-h-[100svh] overflow-hidden bg-grid bg-ink-950 flex items-center justify-center pt-20 pb-16 sm:pt-32 sm:pb-24 "
     >
       {/* Glow */}
       <div className="pointer-events-none absolute inset-0">
