@@ -38,7 +38,6 @@ export default function Home() {
         <CTA />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }

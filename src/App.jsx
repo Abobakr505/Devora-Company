@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import CustomCursor from "./components/Cursor/CustomCursor.jsx";
 import Home from "./pages/Home.jsx";
 import ProjectDetails from "./pages/ProjectDetails.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects/:slug" element={<ProjectDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />

@@ -228,6 +228,14 @@ export const translations = {
       tagline: "Building digital products for what's next.",
       copyright: "© 2026 Devora. All rights reserved.",
     },
+    notFound: {
+      label: "PAGE NOT FOUND",
+      title: "The page you're looking for doesn't exist",
+      description: "It looks like you've reached a path that doesn't exist. Let's get you somewhere better.",
+      home: "Back to home",
+      back: "Go back",
+      tagline: "Devora — Building what comes next.",
+    },
   },
 
   ar: {
@@ -458,6 +466,14 @@ export const translations = {
     footer: {
       tagline: "نبني منتجات رقمية لما هو قادم.",
       copyright: "© 2026 ديفورا. جميع الحقوق محفوظة.",
+    },
+    notFound: {
+      label: "الصفحة غير موجودة",
+      title: "الصفحة التي تبحث عنها غير موجودة",
+      description: "يبدو أنك وصلت إلى طريق غير موجود. دعنا نعيدك إلى مكان أفضل.",
+      home: "العودة للرئيسية",
+      back: "الرجوع للخلف",
+      tagline: "ديفورا — نبني ما هو قادم.",
     },
   },
 };
