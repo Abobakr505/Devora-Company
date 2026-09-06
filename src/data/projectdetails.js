@@ -67,7 +67,7 @@ export function getProjects(lang = "en") {
   );
 }
 
-export function getAdjacentProjects(currentSlug) {
+export function getAdjacentProjects(currentSlug, lang = "en") {
   const currentIndex = projects.findIndex(
     (project) => project.slug === currentSlug
   );
@@ -79,8 +79,15 @@ export function getAdjacentProjects(currentSlug) {
     };
   }
 
+  const localize = (project) =>
+    lang === "ar" ? { ...project, ...project.ar } : project;
+
   return {
-    previous: currentIndex > 0 ? projects[currentIndex - 1] : null,
-    next: currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null,
+    previous:
+      currentIndex > 0 ? localize(projects[currentIndex - 1]) : null,
+    next:
+      currentIndex < projects.length - 1
+        ? localize(projects[currentIndex + 1])
+        : null,
   };
 }

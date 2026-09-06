@@ -48,6 +48,7 @@ export const translations = {
         "Devora is a growing software company focused on building digital products and scalable software solutions that help businesses move faster, operate smarter, and create better experiences for the people they serve.",
         "We work closely with founders and teams to turn early ideas into products that hold up under real usage — not just demos.",
       ],
+      footer: "Building digital experiences that make a difference.",
     },
     stats: [
       { value: 20, suffix: "+", label: "Projects Delivered" },
@@ -106,6 +107,10 @@ export const translations = {
     projects: {
       label: "SELECTED WORK",
       title: "Products we've shipped",
+      description:
+        "Selected projects built with strategy, technology, and attention to every detail.",
+      view: "View",
+      footer: "Built with intention. Designed for impact.",
       items: [
         {
           index: "01",
@@ -147,6 +152,7 @@ export const translations = {
     },
     projectDetails: {
       back: "Back to projects",
+      info: "Project info",
       client: "Client",
       year: "Year",
       role: "Role",
@@ -154,12 +160,17 @@ export const translations = {
       visit: "Visit website",
       challenge: "The challenge",
       solution: "The solution",
+      resultsLabel: "Results",
+      results: "Project impact",
+      showcaseLabel: "Showcase",
+      gallery: "Inside the project",
       prev: "Previous project",
       next: "Next project",
     },
     whyDevora: {
       label: "WHY DEVORA",
       title: "Reasons teams choose to build with us",
+      footer: "Technology is our craft. Your success is our goal.",
       items: [
         { index: "01", title: "Built for Scale", description: "Architecture that holds up under real usage, not just a demo." },
         { index: "02", title: "Modern Technology", description: "Tools chosen for the problem, not for the trend." },
@@ -184,6 +195,9 @@ export const translations = {
     techStack: {
       label: "BUILT WITH THE RIGHT TECHNOLOGY",
       title: "A stack chosen for the problem",
+      description:
+        "Modern technologies and proven tools to build fast, scalable, and reliable digital products.",
+      footer: "Always exploring better technologies.",
       groups: [
         { group: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind"] },
         { group: "Backend", items: ["Node.js", "Go", "Python"] },
@@ -200,10 +214,17 @@ export const translations = {
     contact: {
       label: "LET'S TALK",
       title: "Tell us about your project",
+      subtitle: "Have a project in mind? Let's build something exceptional together.",
       email: "hello@devora.dev",
+      emailLabel: "Email",
       phone: "+20 100 000 0000",
+      phoneLabel: "Phone",
       location: "Sohag, Egypt — Remote Worldwide",
+      locationLabel: "Location",
+      available: "Available for new projects",
       form: {
+        startProject: "Start a project",
+        title: "Tell us about your project",
         name: "Name",
         namePlaceholder: "Your name",
         email: "Email",
@@ -287,6 +308,7 @@ export const translations = {
         "ديفورا شركة برمجيات في طور النمو، تركّز على بناء منتجات رقمية وحلول برمجية قابلة للتوسع تساعد الشركات على العمل بشكل أسرع وأذكى، وتقديم تجربة أفضل لعملائها.",
         "نعمل عن قرب مع المؤسسين والفرق لتحويل الأفكار الأولية إلى منتجات تصمد أمام الاستخدام الحقيقي — وليست مجرد عروض تجريبية.",
       ],
+      footer: "نبني تجارب رقمية تُحدث فرقًا حقيقيًا.",
     },
     stats: [
       { value: 20, suffix: "+", label: "مشروعًا منجزًا" },
@@ -345,6 +367,10 @@ export const translations = {
     projects: {
       label: "أعمال مختارة",
       title: "منتجات أطلقناها",
+      description:
+        "مشاريع مختارة بُنيت باستراتيجية وتقنية واهتمام بكل تفصيلة.",
+      view: "استعرض المشروع",
+      footer: "بُنيت بعناية، وصُممت لتُحدث أثرًا.",
       items: [
         {
           index: "01",
@@ -386,6 +412,7 @@ export const translations = {
     },
     projectDetails: {
       back: "الرجوع للمشاريع",
+      info: "معلومات المشروع",
       client: "العميل",
       year: "السنة",
       role: "الدور",
@@ -393,12 +420,17 @@ export const translations = {
       visit: "زيارة الموقع",
       challenge: "التحدي",
       solution: "الحل",
+      resultsLabel: "النتائج",
+      results: "أثر المشروع",
+      showcaseLabel: "استعراض المشروع",
+      gallery: "من داخل المشروع",
       prev: "المشروع السابق",
       next: "المشروع التالي",
     },
     whyDevora: {
       label: "لماذا ديفورا",
       title: "أسباب تجعل الفرق تختار العمل معنا",
+      footer: "التقنية حرفتنا، ونجاحك هو هدفنا.",
       items: [
         { index: "01", title: "مبني للتوسع", description: "بنية تقنية تصمد أمام الاستخدام الحقيقي، وليست مجرد عرض تجريبي." },
         { index: "02", title: "تقنية حديثة", description: "أدوات تُختار بناءً على المشكلة، وليس بناءً على الموضة." },
@@ -423,6 +455,9 @@ export const translations = {
     techStack: {
       label: "مبني بالتقنية المناسبة",
       title: "تقنيات تُختار حسب المشكلة",
+      description:
+        "تقنيات حديثة وأدوات مجرّبة لبناء منتجات رقمية سريعة وقابلة للتوسع وموثوقة.",
+      footer: "نستكشف دائمًا تقنيات أفضل.",
       groups: [
         { group: "الواجهة الأمامية", items: ["React", "Next.js", "TypeScript", "Tailwind"] },
         { group: "الواجهة الخلفية", items: ["Node.js", "Go", "Python"] },
@@ -439,10 +474,17 @@ export const translations = {
     contact: {
       label: "تواصل معنا",
       title: "أخبرنا عن مشروعك",
+      subtitle: "لديك مشروع في ذهنك؟ لنبنِ معًا شيئًا استثنائيًا.",
       email: "hello@devora.dev",
+      emailLabel: "البريد الإلكتروني",
       phone: "+20 100 000 0000",
+      phoneLabel: "الهاتف",
       location: "سوهاج، مصر — عن بُعد لجميع أنحاء العالم",
+      locationLabel: "الموقع",
+      available: "متاحون لمشاريع جديدة",
       form: {
+        startProject: "ابدأ مشروعًا",
+        title: "أخبرنا عن مشروعك",
         name: "الاسم",
         namePlaceholder: "اسمك",
         email: "البريد الإلكتروني",
