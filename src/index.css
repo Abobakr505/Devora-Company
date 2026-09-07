@@ -52,11 +52,13 @@
 
 html[lang="ar"] body {
   font-family: "thmanyahsans", sans-serif;
+  letter-spacing: 0;
 }
 
 html[lang="ar"] .font-display {
   font-family: "thmanyah", sans-serif;
   letter-spacing: 0;
+  line-height: 1.2;
 }
 }
 
