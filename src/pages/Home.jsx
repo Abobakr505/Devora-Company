@@ -10,6 +10,7 @@ import Projects from "../components/Projects/Projects.jsx";
 import WhyDevora from "../components/WhyDevora/WhyDevora.jsx";
 import Process from "../components/Process/Process.jsx";
 import TechStack from "../components/TechStack/TechStack.jsx";
+import Testimonials from "../components/Testimonials/Testimonials.jsx";
 import CTA from "../components/CTA/CTA.jsx";
 import Contact from "../components/Contact/Contact.jsx";
 import Footer from "../components/Footer/Footer.jsx";
@@ -35,6 +36,7 @@ export default function Home() {
         <WhyDevora />
         <Process />
         <TechStack />
+        <Testimonials />
         <CTA />
         <Contact />
       </main>

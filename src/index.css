@@ -121,3 +121,26 @@ html[lang="ar"] .font-display {
 .lang{
   font-family: "'Space Grotesk'","thmanyahsans", sans-serif !important;
 }
+
+/* ضيف السطور دي في ملف الـ CSS الرئيسي بتاعك (مثلاً index.css)
+   جوه الـ @layer components أو في الآخر، عشان class="input" في ProjectForm يشتغل */
+
+.input {
+  width: 100%;
+  border-radius: 0.75rem;
+  background-color: rgba(15, 23, 20, 0.7); /* قريب من ink-900/70 */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.875rem 1rem;
+  color: #f1f5f2; /* mist-100 */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input::placeholder {
+  color: #4b5a53; /* mist-700 */
+}
+
+.input:focus {
+  border-color: rgba(16, 185, 129, 0.5); /* emerald-500/50 */
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.05);
+}

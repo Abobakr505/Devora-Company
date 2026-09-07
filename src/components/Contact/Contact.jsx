@@ -6,15 +6,19 @@ import {
   ArrowUpRight,
   Send,
   CheckCircle2,
+  AlertCircle,
 } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal.js";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
+import { supabase } from "../../lib/supabaseClient.js";
 
 export default function Contact() {
   const { t } = useLanguage();
   const revealRef = useScrollReveal("[data-reveal]");
 
   const [status, setStatus] = useState("idle");
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const [form, setForm] = useState({
     name: "",
@@ -40,12 +44,27 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitError("");
+    setSending(true);
+
+    const { error } = await supabase.from("messages").insert({
+      name: form.name,
+      email: form.email,
+      company: form.company || null,
+      project_type: form.projectType,
+      message: form.message,
+    });
+
+    setSending(false);
+
+    if (error) {
+      setSubmitError(t.contact.form.error ?? "حصل خطأ، حاول تاني أو تواصل معنا مباشرة على الإيميل.");
+      return;
+    }
 
     setStatus("sent");
-
-    // Add EmailJS / API integration here.
   };
 
   const contactItems = [
@@ -436,11 +455,19 @@ export default function Contact() {
                   />
                 </div>
 
+                {/* Error */}
+                {submitError && (
+                  <div className="sm:col-span-2 flex items-center gap-2 text-sm text-red-400">
+                    <AlertCircle size={15} className="shrink-0" />
+                    {submitError}
+                  </div>
+                )}
+
                 {/* Submit */}
                 <div className="sm:col-span-2 pt-2">
                   <button
                     type="submit"
-                    disabled={status === "sent"}
+                    disabled={status === "sent" || sending}
                     className="
                       group
                       relative
@@ -461,6 +488,7 @@ export default function Contact() {
                       hover:shadow-emerald-500/20
                       active:scale-[0.98]
                       disabled:cursor-default
+                      disabled:opacity-70
                     "
                   >
                     {status === "sent" ? (
@@ -468,6 +496,8 @@ export default function Contact() {
                         <CheckCircle2 size={18} />
                         {t.contact.form.sent}
                       </>
+                    ) : sending ? (
+                      <span>{t.contact.form.sending ?? "جاري الإرسال..."}</span>
                     ) : (
                       <>
                         <span>

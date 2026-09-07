@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import {
   ArrowLeft,
@@ -7,27 +8,53 @@ import {
 } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal.js";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
-import {
-  getProjectBySlug,
-  getAdjacentProjects,
-} from "../data/projectdetails.js";
+import { getProjectBySlug, getAdjacentProjects } from "../data/projectsApi.js";
 
 export default function ProjectDetails() {
   const { slug } = useParams();
   const { t, lang } = useLanguage();
 
-  const project = getProjectBySlug(slug, lang);
+  const [project, setProject] = useState(undefined); // undefined = بيحمّل, null = مش موجود
+  const [adjacent, setAdjacent] = useState({ previous: null, next: null });
 
   const revealRef = useScrollReveal("[data-reveal]", {
     y: 40,
     stagger: 0.1,
   });
 
+  useEffect(() => {
+    let active = true;
+    setProject(undefined);
+
+    Promise.all([getProjectBySlug(slug, lang), getAdjacentProjects(slug, lang)]).then(
+      ([projectData, adjacentData]) => {
+        if (!active) return;
+        setProject(projectData);
+        setAdjacent(adjacentData);
+      }
+    );
+
+    return () => {
+      active = false;
+    };
+  }, [slug, lang]);
+
+  if (project === undefined) {
+    return (
+      <div className="min-h-screen bg-ink-950 flex items-center justify-center">
+        <div className="flex items-center gap-3 text-mist-500">
+          <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-sm">{t.admin.loading}</span>
+        </div>
+      </div>
+    );
+  }
+
   if (!project) {
     return <Navigate to="/" replace />;
   }
 
-  const { previous, next } = getAdjacentProjects(slug, lang);
+  const { previous, next } = adjacent;
 
   return (
     <article className="min-h-screen bg-ink-950 text-mist-100 overflow-hidden">
@@ -125,7 +152,7 @@ export default function ProjectDetails() {
             data-reveal
             className="flex flex-wrap gap-2.5 mt-9"
           >
-            {project.tech.map((tech) => (
+            {(project.tech ?? []).map((tech) => (
               <span
                 key={tech}
                 className="
@@ -151,64 +178,66 @@ export default function ProjectDetails() {
       {/* =====================================================
           HERO IMAGE
       ===================================================== */}
-      <section className="relative z-10 -mt-8 md:-mt-16">
-        <div className="container-devora">
-          <div
-            data-reveal
-            className="
-              group
-              relative
-              overflow-hidden
-              rounded-3xl
-              border border-white/[0.08]
-              bg-ink-900
-              shadow-2xl
-              shadow-black/40
-              aspect-[16/9]
-            "
-          >
-            {/* Image glow */}
-            <div className="absolute -inset-10 bg-emerald-500/[0.04] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-            <img
-              src={project.heroImage}
-              alt={project.name}
-              className="
-                relative z-10
-                w-full h-full
-                object-cover
-                transition-transform duration-1000
-                group-hover:scale-[1.025]
-              "
-              loading="eager"
-            />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 z-20 bg-gradient-to-t from-ink-950/30 via-transparent to-transparent pointer-events-none" />
-
-            {/* Corner label */}
+      {project.heroImage && (
+        <section className="relative z-10 -mt-8 md:-mt-16">
+          <div className="container-devora">
             <div
+              data-reveal
               className="
-                absolute
-                bottom-5 left-5
-                z-30
-                hidden sm:flex
-                items-center gap-2
-                rounded-full
-                border border-white/10
-                bg-ink-950/60
-                backdrop-blur-xl
-                px-4 py-2
-                text-xs text-mist-400
+                group
+                relative
+                overflow-hidden
+                rounded-3xl
+                border border-white/[0.08]
+                bg-ink-900
+                shadow-2xl
+                shadow-black/40
+                aspect-[16/9]
               "
             >
-              <Sparkles size={13} className="text-emerald-400" />
+              {/* Image glow */}
+              <div className="absolute -inset-10 bg-emerald-500/[0.04] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-              {project.category}
+              <img
+                src={project.heroImage}
+                alt={project.name}
+                className="
+                  relative z-10
+                  w-full h-full
+                  object-cover
+                  transition-transform duration-1000
+                  group-hover:scale-[1.025]
+                "
+                loading="eager"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 z-20 bg-gradient-to-t from-ink-950/30 via-transparent to-transparent pointer-events-none" />
+
+              {/* Corner label */}
+              <div
+                className="
+                  absolute
+                  bottom-5 left-5
+                  z-30
+                  hidden sm:flex
+                  items-center gap-2
+                  rounded-full
+                  border border-white/10
+                  bg-ink-950/60
+                  backdrop-blur-xl
+                  px-4 py-2
+                  text-xs text-mist-400
+                "
+              >
+                <Sparkles size={13} className="text-emerald-400" />
+
+                {project.category}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* =====================================================
           PROJECT INFO
@@ -300,18 +329,22 @@ export default function ProjectDetails() {
             {/* Content */}
             <div className="lg:col-span-8 space-y-20">
               {/* Challenge */}
-              <ContentBlock
-                number="01"
-                title={t.projectDetails.challenge}
-                text={project.challenge}
-              />
+              {project.challenge && (
+                <ContentBlock
+                  number="01"
+                  title={t.projectDetails.challenge}
+                  text={project.challenge}
+                />
+              )}
 
               {/* Solution */}
-              <ContentBlock
-                number="02"
-                title={t.projectDetails.solution}
-                text={project.solution}
-              />
+              {project.solution && (
+                <ContentBlock
+                  number="02"
+                  title={t.projectDetails.solution}
+                  text={project.solution}
+                />
+              )}
             </div>
           </div>
         </div>
